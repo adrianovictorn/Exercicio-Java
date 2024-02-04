@@ -22,10 +22,18 @@ public class escola {
 
     public void associarProfessorATurma(turma turma, professor professor){
       turma.associarProfessorATurma(professor);
+      professor.vincularProfessorATurma(turma);
     }
 
     public void associarAlunosATurma (turma turma, aluno aluno){
         turma.associarAluno(aluno);
+    }
+
+    public void listaDeVinculos(professor professor){
+        for (turma i : professor.listaDeProfessoresPorTurmas)) {
+            System.out.println(i.professoresAssociados);
+        }
+
     }
     
     public void qtdAlunosMatriculados(){

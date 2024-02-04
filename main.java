@@ -1,5 +1,4 @@
-import java.time.LocalDate;
-import java.util.ArrayList;
+
 
 public class main {
     public static void main(String[] args) {
@@ -11,17 +10,23 @@ public class main {
         aluno a5 = new aluno("cristina", 20, 01);
         
         professor p1 = new professor("Albertino", 70, 0);
+       
 
         escola e1 = new escola();
         turma t1 = new turma(1);
+        turma t2 = new turma(2);
         e1.associarProfessorATurma(t1, p1);
         e1.associarAlunosATurma(t1, a5);
         e1.associarAlunosATurma(t1, a4);
         e1.associarAlunosATurma(t1, a2);
         e1.associarAlunosATurma(t1, a3);
 
+        e1.cadastrarTurmas(t2);
+        e1.associarProfessorATurma(t2, p1);
         e1.associarAlunosATurma(t1, a1);
-
+        System.out.println("Lista de Vinculos: ");
+        e1.listaDeVinculos(p1);
+        System.out.println(p1);
         System.out.println(t1);
 
         

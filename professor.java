@@ -1,5 +1,8 @@
+import java.util.ArrayList;
+
 public class professor extends usuario {
-    int identificaoProfessor;
+    private int identificaoProfessor;
+    ArrayList<turma> listaDeProfessoresPorTurmas = new ArrayList<turma>();
 
     public professor (String nome, int idade, int identificaoProfessor){
         this.setIdade(idade);
@@ -9,6 +12,9 @@ public class professor extends usuario {
         this.identificaoProfessor = identificaoProfessor;
     }
 
+    public void vincularProfessorATurma(turma turma){
+        listaDeProfessoresPorTurmas.add(turma);
+    }
     public int getIdentificaoProfessor() {
         return identificaoProfessor;
     }
@@ -29,6 +35,6 @@ public class professor extends usuario {
 
     @Override
     public String toString() {
-        return "Nome: "+getNome()+" | "+"Identificacao:"+getIdentificaoProfessor();
+        return "Nome: "+getNome()+" | "+"Identificacao:"+getIdentificaoProfessor()+"\nTurmas que ministra";
     }
 }
