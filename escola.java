@@ -30,8 +30,8 @@ public class escola {
     }
 
     public void listaDeVinculos(professor professor){
-        for (turma i : professor.listaDeProfessoresPorTurmas)) {
-            System.out.println(i.professoresAssociados);
+        for (turma i : professor.listaDeProfessoresPorTurmas){
+            System.out.println(i.getIdentificaoDaTurma());
         }
 
     }

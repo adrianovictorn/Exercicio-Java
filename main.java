@@ -26,8 +26,8 @@ public class main {
         e1.associarAlunosATurma(t1, a1);
         System.out.println("Lista de Vinculos: ");
         e1.listaDeVinculos(p1);
-        System.out.println(p1);
-        System.out.println(t1);
+      
+        
 
         
 
